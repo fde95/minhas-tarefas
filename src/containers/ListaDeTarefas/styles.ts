@@ -1,14 +1,15 @@
 import styled from 'styled-components'
+import variaveis from '../../styles/variaveis'
 
 export const Main = styled.main`
-  background-color: #15181f;
+  background-color: ${variaveis.fundoTelaTarefas};
   height: 95vh;
   overflow-y: scroll;
 `
 
 export const TituloLista = styled.h2`
   font-size: 32px;
-  color: #ffffff;
+  color: ${variaveis.branco};
   margin: 30px 0 0 50px;
   @media (max-width: 767px) {
     margin: 30px 0 0 20px;

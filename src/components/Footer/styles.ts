@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import variaveis from '../../styles/variaveis'
 
 export const Footer = styled.footer`
   display: flex;
@@ -32,11 +33,11 @@ export const Social = styled.ul`
 `
 export const SocialItem = styled.a`
   margin: 0 8px;
-  color: #09c435;
+  color: ${variaveis.verde};
   font-size: 18px;
   padding: 5px 8px;
   border-radius: 8px;
-  background-color: #ffffff;
+  background-color: ${variaveis.branco};
   opacity: 50%;
   transition: 0.8s ease;
   &:hover {

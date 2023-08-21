@@ -1,10 +1,11 @@
 import styled from 'styled-components'
+import variaveis from '../../styles/variaveis'
 
 export const Aside = styled.aside`
   padding: 16px;
-  background-color: #1a1e27;
+  background-color: ${variaveis.fundoBarraLateral};
   height: 100vh;
-  border-right: 3px solid #242831;
+  border-right: 3px solid ${variaveis.fundoCardBarraLateral};
 `
 export const Filtros = styled.div`
   display: block;
@@ -13,14 +14,14 @@ export const Filtros = styled.div`
 export const Campo = styled.input`
   border: none;
   margin-left: 16px;
-  color: #55585f;
+  color: ${variaveis.textoSecundario};
   background-color: transparent;
   font-size: 20px;
   &:focus-visible {
     outline: none;
-    color: #ffffff;
+    color: ${variaveis.branco};
   }
 `
 export const Icon = styled.i`
-  color: #55585f;
+  color: ${variaveis.textoSecundario};
 `
