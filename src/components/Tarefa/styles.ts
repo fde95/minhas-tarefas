@@ -1,32 +1,34 @@
 import styled from 'styled-components'
 import variaveis from '../../styles/variaveis'
 
+import * as enums from '../../utils/enums/Tarefa'
+
 type TagProps = {
-  prioridade?: string
-  status?: string
+  prioridade?: enums.Prioridade
+  status?: enums.Status
+  parametro: 'status' | 'prioridade'
 }
 
 function returnaCorDeTexto(props: TagProps): string {
-  if ('status' in props) {
-    if (props.status === 'Pendente') return variaveis.laranja
-    if (props.status === 'Concluido') return variaveis.verde
-    return '#ccc'
-  } else if ('prioridade' in props) {
-    if (props.prioridade === 'Urgente') return variaveis.vermelho
-    if (props.prioridade === 'Normal') return variaveis.azul
+  if (props.parametro === 'prioridade') {
+    if (props.prioridade === enums.Prioridade.URGENTE) return variaveis.vermelho
+  } else {
+    if (props.status === enums.Status.PENDENTE) return variaveis.laranja
+    if (props.status === enums.Status.CONCLUIDO) return variaveis.verde
   }
-  return '#ccc'
+
+  return variaveis.azul
 }
 function returnaCorDeFundo(props: TagProps): string {
   if ('status' in props) {
-    if (props.status === 'Pendente') return variaveis.fundoLaranja
-    if (props.status === 'Concluido') return variaveis.fundoVerde
-    return '#ccc'
+    if (props.status === enums.Status.PENDENTE) return variaveis.fundoLaranja
+    if (props.status === enums.Status.CONCLUIDO) return variaveis.fundoVerde
+    return variaveis.fundoAzul
   } else if ('prioridade' in props) {
-    if (props.prioridade === 'Urgente') return variaveis.fundoVermelho
-    if (props.prioridade === 'Normal') return variaveis.fundoAzul
+    if (props.prioridade === enums.Prioridade.URGENTE)
+      return variaveis.fundoVermelho
   }
-  return '#ccc'
+  return variaveis.fundoAzul
 }
 
 export const Card = styled.div`
