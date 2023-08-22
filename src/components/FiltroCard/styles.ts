@@ -1,10 +1,13 @@
 import styled from 'styled-components'
-import { Props } from '.'
+
 import variaveis from '../../styles/variaveis'
 
-type PropsSemLegendaEContador = Omit<Props, 'contador' | 'legenda'>
+type Props = {
+  ativo: boolean
+}
 
-export const Card = styled.div<PropsSemLegendaEContador>`
+export const Card = styled.div<Props>`
+  cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
