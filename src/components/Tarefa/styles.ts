@@ -37,6 +37,10 @@ export const Card = styled.div`
   margin: 32px 16px;
   width: 430px;
   border-radius: 8px;
+  em {
+    color: ${variaveis.textoSecundario};
+    font-size: 14px;
+  }
 `
 
 export const Titulo = styled.h3`
@@ -44,6 +48,10 @@ export const Titulo = styled.h3`
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 8px;
+  align-items: center;
+  input {
+    margin-right: 8px;
+  }
 `
 export const SubTitulo = styled.h4`
   margin-top: 32px;
