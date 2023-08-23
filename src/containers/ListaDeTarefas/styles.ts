@@ -10,12 +10,16 @@ export const Main = styled.main`
 export const TituloLista = styled.h2`
   font-size: 32px;
   color: ${variaveis.branco};
-  margin: 30px 0 0 50px;
+`
+export const ContainerCabecalho = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 50px;
   @media (max-width: 767px) {
-    margin: 30px 0 0 20px;
+    margin: 30px 20px;
   }
   @media (min-width: 768px) and (max-width: 1280px) {
-    margin: 30px 0 0 24px;
+    margin: 30px 24px;
   }
 `
 

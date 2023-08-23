@@ -4,6 +4,7 @@ import Tarefa from '../../components/Tarefa'
 import * as S from './styles'
 
 import { RootReducer } from '../../store'
+import BotaoAdicionar from '../../components/BotaoAdicionar'
 
 const ListaTarefas = () => {
   const { itens } = useSelector((state: RootReducer) => state.tarefas)
@@ -52,7 +53,10 @@ const ListaTarefas = () => {
   return (
     <>
       <S.Main>
-        <S.TituloLista>Lista de Tarefas</S.TituloLista>
+        <S.ContainerCabecalho>
+          <S.TituloLista>Lista de Tarefas</S.TituloLista>
+          <BotaoAdicionar />
+        </S.ContainerCabecalho>
         <S.ContadorDeTarefas>{mensagem}</S.ContadorDeTarefas>
         <S.Grid>
           {tarefas.map((t) => (
