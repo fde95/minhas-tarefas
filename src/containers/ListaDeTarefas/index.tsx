@@ -3,6 +3,8 @@ import { useSelector } from 'react-redux'
 import Tarefa from '../../components/Tarefa'
 import * as S from './styles'
 
+import { Main, TituloLista, ContainerCabecalho } from '../../styles/index'
+
 import { RootReducer } from '../../store'
 import BotaoAdicionar from '../../components/BotaoAdicionar'
 
@@ -52,11 +54,11 @@ const ListaTarefas = () => {
 
   return (
     <>
-      <S.Main>
-        <S.ContainerCabecalho>
-          <S.TituloLista>Lista de Tarefas</S.TituloLista>
+      <Main>
+        <ContainerCabecalho>
+          <TituloLista>Lista de Tarefas</TituloLista>
           <BotaoAdicionar />
-        </S.ContainerCabecalho>
+        </ContainerCabecalho>
         <S.ContadorDeTarefas>{mensagem}</S.ContadorDeTarefas>
         <S.Grid>
           {tarefas.map((t) => (
@@ -71,7 +73,7 @@ const ListaTarefas = () => {
             </li>
           ))}
         </S.Grid>
-      </S.Main>
+      </Main>
     </>
   )
 }
